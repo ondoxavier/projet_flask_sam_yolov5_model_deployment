@@ -1,0 +1,6 @@
+[submodule "segment-anything"]
+	path = segment-anything
+	url = https://github.com/facebookresearch/segment-anything.git
+[submodule "yolov5"]
+	path = yolov5
+	url = https://github.com/ultralytics/yolov5.git
