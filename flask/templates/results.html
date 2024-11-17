@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        Final Project: Results of the Analysis
+    </header>
+    <main>
+        <h2>Results for the image : {{ image }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Component</th>
+                    <th>Area</th>
+                    <th>Void%</th>
+                    <th>Max.Void%</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row.Image }}</td>
+                    <td>{{ row.Component }}</td>
+                    <td>{{ row.Area }}</td>
+                    <td>{{ row.VoidPercentage }}</td>
+                    <td>{{ row.MaxVoidPercentage }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="image-container">
+            <h2>Image analyzed</h2>
+            <img src="{{ image_url }}" alt="Image téléchargée" class="uploaded-image">
+        </div>
+        
+        <a href="/" class="button">Analyze another image</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,7 @@
+clone yolov5 :git clone https://github.com/ultralytics/yolov5
+
+install dependence : pip install -r requirements.txt
+
+train yolov5 model: python train.py --img 640 --batch 16 --epochs 50 --data data.yaml --weights yolov5s.pt --cache
+
+test model : python detect.py --weights runs/train/exp5/weights/best.pt --img 640 --conf 0.25 --source "C:\Users\mon pc\OneDrive\Bureau\projet_model_deployment\test\images\21_jpg.rf.9626c8a6f0e31d4e4fd29950e0682382.jpg"
